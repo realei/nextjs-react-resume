@@ -37,6 +37,7 @@ import {
   SkillGroup,
   Social,
   TestimonialSection,
+  // UniversityItem,
   TimelineItem,
 } from './dataDef';
 
@@ -44,7 +45,7 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
+  title: 'Meet Lei Wang',
   description: "Example site built with Tim Baker's react resume template",
 };
 
@@ -69,28 +70,27 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Lei Wang.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Athens based <strong className="text-stone-100">Full Stack AI Engineer</strong>, currently working at{' '}
+        <strong className="text-stone-100">Toorbee</strong> helping build a modern, LLM based travel assistant chatbot.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, I enjoy working out, walking my <strong className="text-stone-100">dog</strong>, shopping for
+        fresh produce at the <strong className="text-stone-100">Laki Street Market</strong> in Greece, and cooking. I
+        also love exploring the beauty of the <strong className="text-stone-100">Aegean Sea</strong> during my weekend.
       </p>
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
+    // {
+    //   href: '/assets/resume.pdf',
+    //   text: 'Resume',
+    //   primary: true,
+    //   Icon: ArrowDownTrayIcon,
+    // },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -104,16 +104,18 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I'm an Athens-based Full Stack AI Engineer, with a keen interest in LLM, LangChain, 
+  backend development, coding, Kubernetes, and machine learning. While I find comfort in backend technologies 
+  and AI frameworks, I'm also intrigued by React on the frontend and am actively learning to expand my skills. 
+  With the ability to navigate both backend and frontend development, I'm equipped as an indie hacker to
+  conceptualize and build products from scratch`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Athens, GR', Icon: MapIcon},
+    {label: 'Gender', text: 'he/him', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Chinese / EU Resident', Icon: FlagIcon},
+    {label: 'Interests', text: 'Fitness, Healthy Eating, Travel', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Macau', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Toorbee(A Greek Startup)', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -126,182 +128,249 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'English',
+        level: 9,
+      },
+      {
+        name: 'Chinese',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
+        name: 'Greek',
+        level: 1,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Frontend/Backend development',
     skills: [
       {
-        name: 'React',
+        name: 'Django',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'Python',
+        level: 9,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'React',
+        level: 4,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'LLM/Machine Learning',
     skills: [
       {
-        name: 'Node.js',
+        name: 'LangChain',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Pytorch',
+        level: 8,
       },
       {
-        name: 'Golang',
+        name: 'Airflow',
         level: 4,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Cloud Native Skills',
     skills: [
       {
-        name: 'React Native',
+        name: 'Kubernetes',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'CI/CD',
+        level: 7,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Microservices',
+        level: 7,
       },
     ],
   },
 ];
 
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
-];
+// /**
+//  * Portfolio section
+//  */
+// export const portfolioItems: PortfolioItem[] = [
+//   {
+//     title: 'Project title 1',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage1,
+//   },
+//   {
+//     title: 'Project title 2',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage2,
+//   },
+//   {
+//     title: 'Project title 3',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage3,
+//   },
+//   {
+//     title: 'Project title 4',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage4,
+//   },
+//   {
+//     title: 'Project title 5',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage5,
+//   },
+//   {
+//     title: 'Project title 6',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage6,
+//   },
+//   {
+//     title: 'Project title 7',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage7,
+//   },
+//   {
+//     title: 'Project title 8',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage8,
+//   },
+//   {
+//     title: 'Project title 9',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage9,
+//   },
+//   {
+//     title: 'Project title 10',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage10,
+//   },
+//   {
+//     title: 'Project title 11',
+//     description: 'Give a short description of your project here.',
+//     url: 'https://reactresume.com',
+//     image: porfolioImage11,
+//   },
+// ];
 
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Macau S.A.R',
+    location: 'University of Macau',
+    title: 'Master',
+    content: (
+      <p>
+        During my master's program(Electrical and Electronics Engineering), I was awarded a full scholarship and served
+        as a teaching assistant. My research focused on implementing algorithms parallel acceleration using FPGA
+        technology.
+      </p>
+    ),
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Lisbon, Portugal',
+    location: 'Instituto Superior Técnico',
+    title: 'AI Research Assistant',
+    content: (
+      <p>
+        Research and implement computer vision algorithms using GPU acceleration to enhance the cognitive abilities of
+        robots.
+      </p>
+    ),
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'May 2019 - Present',
+    location: 'Toorbee @ Athens, Greece',
+    title: 'Senior Machine Learning Engineer | Full Stack AI Engineer',
+    content: (
+      <ul>
+        <li style={{marginBottom: '10px'}}>
+          Designed and developed "TourLIngo AI ChatBot" utilizing LangChain, Django, Websockets, LLM, Next.js, and React
+          to build the MVP product.
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Designed and developed the Image Search product primarily using PyTorch, Flask, Kubernetes, Faiss, and Airflow
+          for data flow.
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Assisted the company in integrating backend services for WeChat Payment, Alipay, UnionPay, and other payment
+          methods catering to Asian tourists.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    date: 'Nov 2017 - Apr 2019',
+    location: 'Anastassiadis Group @ Athens, Greece',
+    title: 'Real Estate Investment Consultant',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Worked as a real estate consultant for a local company, involved in the Greek Golden Visa program, facilitating
+        property investments of €250,000 or more for residency purposes.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Feb 2016 - Jul 2017',
+    location: 'IBM @ Beijing, China',
+    title: 'Cloud Technical Lead',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li style={{marginBottom: '10px'}}>
+          Led DevOps team in delivery of OpenStack datacenter project requiring close cooperation among stakeholders to
+          share information and develop solutions to meet broad array of deliverables
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Designed and deployed three Private Cloud in OpenStack open source solutions with HA, Load Balancer,
+          distributed backend
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Designed and implemented customized OpenStack Dedicated Datacenter as DevOps Platform for large scale images
+          (500+), with security automation and storage optimization
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Architected and implemented security management platform to provide smooth IBM internal Cloud security
+          compliance service for OpenStack Cloud
+        </li>
+      </ul>
+    ),
+  },
+  {
+    date: 'Jun 2011 - Feb 2016',
+    location: 'Infinera @ Beijing, China',
+    title: 'Software Engineer',
+    content: (
+      <ul>
+        <li style={{marginBottom: '10px'}}>
+          Developed lightweight IAAS in Python with ESXi Platform for Infinera's Network product which virtualizes real
+          HW for Dev and QA team
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Developed orchestration service for IAAS automation deployment and configuration in Python and XML
+        </li>
+        <li style={{marginBottom: '10px'}}>
+          Designed and verified Openstack and KVM's open source solutions for replacement of Vmware ESXi for IAAS DevOps
+          platform
+        </li>
+        <li style={{marginBottom: '10px'}}>Developed Infinera's HW diagnostic system in C/C++ language</li>
+      </ul>
     ),
   },
 ];
@@ -336,27 +405,28 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description:
+    'If you are interested in my work experience and personal projects, please feel free to contact me through LinkedIn.',
   items: [
-    {
-      type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
-    },
+    // {
+    //   type: ContactType.Email,
+    //   text: 'reachout@timbaker.me',
+    //   href: 'mailto:reachout@timbaker.me',
+    // },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Athens, Greece',
+      href: 'https://www.google.com/maps/place/Athens/@37.9908692,23.7177398,14z/data=!3m1!4b1!4m6!3m5!1s0x14a1bd1f067043f1:0x2736354576668ddd!8m2!3d37.9838096!4d23.7275388!16zL20vMG4yeg?entry=ttu',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.LinkedIn,
+      text: 'Lei Wang',
+      href: 'https://www.linkedin.com/in/lei-wang-54866926/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: '@realei',
+      href: 'https://github.com/realei',
     },
   ],
 };
@@ -365,9 +435,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/realei'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/lei-wang-54866926/'},
+  // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/leigge'},
 ];

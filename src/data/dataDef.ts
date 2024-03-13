@@ -86,6 +86,13 @@ export interface PortfolioItem {
 /**
  * Resume section
  */
+// export interface UniversityItem {
+//   location: string;
+//   university: string;
+//   title: string;
+//   content: JSX.Element;
+// }
+
 export interface TimelineItem {
   date: string;
   location: string;
