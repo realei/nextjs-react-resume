@@ -15,6 +15,7 @@ const nextConfig = {
 
     return config;
   },
+  assetPrefix: 'https://realei.github.io/nextjs-react-resume/',
   compress: true,
   generateEtags: true,
   pageExtensions: ['tsx', 'mdx', 'ts'],
