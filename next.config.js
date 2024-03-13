@@ -25,16 +25,17 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-      },
-    ],
+    unoptimized: true,
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'images.unsplash.com',
+    //   },
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'source.unsplash.com',
+    //   },
+    // ],
   },
   output: 'export',
 };
