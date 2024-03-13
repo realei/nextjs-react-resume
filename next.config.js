@@ -15,6 +15,7 @@ const nextConfig = {
 
     return config;
   },
+  basePath: '/nextjs-react-resume',
   assetPrefix: 'https://realei.github.io/nextjs-react-resume/',
   compress: true,
   generateEtags: true,
