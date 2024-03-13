@@ -1,6 +1,6 @@
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
+  // ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
@@ -33,7 +33,7 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
+  // PortfolioItem,
   SkillGroup,
   Social,
   TestimonialSection,
