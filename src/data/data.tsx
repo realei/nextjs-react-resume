@@ -74,13 +74,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Athens based <strong className="text-stone-100">Full Stack AI Engineer</strong>, currently working at{' '}
+        I'm an Athens based <strong className="text-stone-100">Full Stack AI Engineer</strong>, currently working at{' '}
         <strong className="text-stone-100">Toorbee</strong> helping build a modern, LLM based travel assistant chatbot.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time, I enjoy working out, walking my <strong className="text-stone-100">dog</strong>, shopping for
-        fresh produce at the <strong className="text-stone-100">Laki Street Market</strong> in Greece, and cooking. I
-        also love exploring the beauty of the <strong className="text-stone-100">Aegean Sea</strong> during my weekend.
+        fresh products at the <strong className="text-stone-100">Laiki Street Market</strong> in Greece, and cooking. I
+        also love exploring the beauty of the <strong className="text-stone-100">Aegean Sea</strong> during my weekends.
       </p>
     </>
   ),
@@ -106,7 +106,7 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `I'm an Athens-based Full Stack AI Engineer, with a keen interest in LLM, LangChain, 
   backend development, coding, Kubernetes, and machine learning. While I find comfort in backend technologies 
-  and AI frameworks, I'm also intrigued by React on the frontend and am actively learning to expand my skills. 
+  and AI frameworks, I'm also intrigued by React on the frontend and I am actively learning to expand my skills. 
   With the ability to navigate both backend and frontend development, I'm equipped as an indie hacker to
   conceptualize and build products from scratch`,
   aboutItems: [
